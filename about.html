@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Skeptical Science Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --ink: #1a1916;
+      --ink-muted: #6b6860;
+      --ink-faint: #b0ada6;
+      --accent: #1D9E75;
+      --accent-light: #e1f5ee;
+      --border: rgba(26,25,22,0.1);
+      --font-body: 'Lora', Georgia, serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+    }
+
+    .site-name {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: var(--ink); }
+    nav a.active { color: var(--accent); }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.1s forwards;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 3.5rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.15s forwards;
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 3rem;
+      opacity: 0;
+      animation: fadeUp 0.4s ease 0.2s forwards;
+    }
+
+    .body-text {
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.25s forwards;
+    }
+
+    .body-text p {
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+
+    .body-text p:last-child { margin-bottom: 0; }
+
+    .coda {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-style: italic;
+      color: var(--ink-muted);
+      font-size: 15px;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.35s forwards;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-faint);
+      letter-spacing: 0.04em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 1rem; }
+      nav { gap: 1rem; }
+      main { padding: 3rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="site-name" href="/">Skeptical Science Notes</a>
+    <nav>
+      <a href="/">Posts</a>
+      <a href="/about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">About this site</p>
+    <h1>Skeptical Science Notes</h1>
+    <p class="subtitle">A biomedical scientist reading the literature in public.</p>
+
+    <hr class="rule" />
+
+    <div class="body-text">
+      <p>Hi, I'm Iago — a biomedical scientist with a background in immunology. I started this site because... well... I needed to read more papers and needed an output to enforce it.</p>
+
+      <p>Skeptical Science Notes is me trying to hold myself accountable. A few journals a week, written up in plain language, with the kind of critical eye you'd apply in a lab meeting rather than a press release. No hype, no oversimplification — just the science, examined honestly. Maybe skeptically?</p>
+
+      <p>This ain't no news site nor textbook. It's more like a lab notebook that got a domain name. Some posts will be polished, maybe. Some will be half-formed thoughts I needed to get out of my head. All of them will be honest about what I know, what I don't, and what the literature actually says.</p>
+    </div>
+
+    <p class="coda">If you've made it this far, why? Go read stuff.</p>
+  </main>
+
+  <footer>
+    &copy; Skeptical Science Notes
+  </footer>
+
+</body>
+</html>
